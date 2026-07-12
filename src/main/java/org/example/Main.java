@@ -15,26 +15,22 @@ public class Main {
         // 2. فتح الموقع
         driver.get("https://bstackdemo.com/");
         
-        // 3. الضغط على زر Sign In
+        // 3. تسجيل الدخول
         driver.findElement(By.id("signin")).click();
-        
-        // 4. خطوة انتظار بسيطة (لضمان تحميل القائمة)
         try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
-
-        // 5. إدخال الـ Username
         driver.findElement(By.id("react-select-2-input")).sendKeys("demouser");
         driver.findElement(By.id("react-select-2-input")).sendKeys(Keys.ENTER);
-
-        // 6. إدخال الـ Password
         driver.findElement(By.id("react-select-3-input")).sendKeys("testingisfun99");
         driver.findElement(By.id("react-select-3-input")).sendKeys(Keys.ENTER);
-
-        // 7. الضغط على زر Log In
         driver.findElement(By.id("login-btn")).click();
         
-        System.out.println("Login process executed successfully!");
+        // 4. إضافة المنتج للسلة
+        try { Thread.sleep(2000); } catch (InterruptedException e) { e.printStackTrace(); }
+        driver.findElement(By.className("shelf-item__buy-btn")).click();
         
-        // 8. إغلاق المتصفح بعد 3 ثواني
+        // 5. التحقق
+        System.out.println("Login and Add to Cart process executed successfully!");
+        
         try { Thread.sleep(3000); } catch (InterruptedException e) { e.printStackTrace(); }
         driver.quit();
     }
