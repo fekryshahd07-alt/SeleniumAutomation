@@ -1,0 +1,41 @@
+# Test Cases Report - BStackDemo Project
+**Author:** Shahd Fekry Hassan
+
+## 1. Product & UI Testing
+| TC_ID | Description | Expected Result | Status |
+| :--- | :--- | :--- | :--- |
+| TC_PRODUCT_001 | Verify product details display | Details page opens with name, image, price | Fail |
+| TC_PRODUCT_002 | Verify product description match | Description matches selected product | Fail |
+| TC_PRODUCT_005 | Check product image visibility | Image appears correctly | Fail |
+| TC_PRODUCT_006 | Check product info click | More info appears on click | Fail |
+| TC_PRODUCT_007 | Duplicate name check | Names should not be duplicated | Fail |
+| TC_PRODUCT_017 | Order details display | Images and details are displayed correctly | Pass |
+
+## 2. Authentication & Sign In
+| TC_ID | Description | Expected Result | Status |
+| :--- | :--- | :--- | :--- |
+| TC_SIGNIN_001 | Login with active user | Successful login & redirect to homepage | Pass |
+| TC_SIGNIN_004 | Login with locked user | Access denied | Pass |
+| TC_SIGNIN_005 | Invalid credentials | Login fails | Pass |
+
+## 3. Favourites & Search
+| TC_ID | Description | Expected Result | Status |
+| :--- | :--- | :--- | :--- |
+| TC_FAV_007 | Add/Remove from favourites | Item added then removed successfully | Pass |
+| TC_SEARCH_001 | Search case insensitivity | Returns correct results regardless of case | Pass |
+| TC_SEARCH_002 | Empty search box | Returns full product list | Pass |
+
+## 4. Checkout & Orders
+| TC_ID | Description | Expected Result | Status |
+| :--- | :--- | :--- | :--- |
+| TC_CHECKOUT_001 | Successful checkout | Order completed successfully | Pass |
+| TC_CHECKOUT_002 | Empty First Name validation | Error: "First Name is required" | Pass |
+| TC_CHECKOUT_011 | Price calculation logic | Total matches sum of items | Pass |
+| TC_CHECKOUT_014 | SQL Injection check | Input treated as string (sanitized) | Fail |
+
+## 5. Offers & Footer
+| TC_ID | Description | Expected Result | Status |
+| :--- | :--- | :--- | :--- |
+| TC_OFFERS_001 | Navigate to Offers page | User redirected to /offers | Pass |
+| TC_FOOTER_001 | Footer visibility | Footer visible at bottom | Pass |
+| TC_FOOTER_003 | External links behavior | Links open in new tab | Pass |
